@@ -1,0 +1,37 @@
+<nav class=" teal darken-4" role="navigation">
+    
+   
+    <div  class="nav-wrapper container" *ngIf="afAuth.user | async as user; else showLogin"><a id="logo-container" href="#" class="brand-logo right">Hello {{ user.displayName }}!</a>
+        <a class="waves-effect waves-light btn-large" (click)="logout()">logout</a>
+      
+
+        
+    
+    </div>
+    <ng-template #showLogin>
+
+        <div  class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo right">Login with google</a>
+            <a class="waves-effect waves-light btn-large" (click)="login()">login</a>
+          
+        
+            
+        
+        </div>
+   
+    </ng-template>
+
+
+
+
+
+  </nav>
+  
+
+
+
+
+
+
+
+
